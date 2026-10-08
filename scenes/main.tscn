@@ -1,16 +1,43 @@
 [gd_scene format=3 uid="uid://d4hlxr7qmym1"]
 
-[ext_resource type="Texture2D" uid="uid://dbpgkojn482yt" path="res://icon.svg" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://dg46gih8yci71" path="res://scenes/player.gd" id="1_0wfyh"]
+[ext_resource type="Texture2D" uid="uid://dbpgkojn482yt" path="res://icon.svg" id="2_sugp2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tatq0"]
+size = Vector2(40, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uh8ql"]
+size = Vector2(1152, 80)
 
 [node name="Main" type="Node2D" unique_id=805956487]
 
-[node name="Pepper" type="Sprite2D" parent="." unique_id=2021945409]
-position = Vector2(539, 322)
-texture = ExtResource("1_ig7tw")
-
 [node name="Label" type="Label" parent="." unique_id=371193259]
-offset_left = 446.0
-offset_top = 409.0
-offset_right = 634.0
-offset_bottom = 432.0
+offset_left = 443.0
+offset_top = 20.0
+offset_right = 631.0
+offset_bottom = 43.0
 text = "Pepper: Before the Hero"
+horizontal_alignment = 1
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=812399752]
+position = Vector2(160, 450)
+script = ExtResource("1_0wfyh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=2021945409]
+texture = ExtResource("2_sugp2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1871192255]
+shape = SubResource("RectangleShape2D_tatq0")
+
+[node name="Ground" type="StaticBody2D" parent="." unique_id=875223148]
+position = Vector2(567, 600)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=1728433890]
+shape = SubResource("RectangleShape2D_uh8ql")
+
+[node name="ColorRect" type="ColorRect" parent="Ground" unique_id=294744458]
+offset_left = -567.0
+offset_top = -40.0
+offset_right = 585.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 1)
