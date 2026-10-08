@@ -9,6 +9,10 @@ extends CharacterBody2D
 # Coyote time allows jumping briefly after leaving a ledge.
 @export var coyote_time: float = 0.12
 
+# Respawn settings
+@export var spawn_position: Vector2 = Vector2(160, 450)
+@export var fall_limit: float = 800.0
+
 var coyote_timer: float = 0.0
 
 @onready var sprite: Sprite2D = $Sprite2D
@@ -43,3 +47,14 @@ func _physics_process(delta: float) -> void:
 
 	# Apply movement with collision handling.
 	move_and_slide()
+
+	# Respawn Pepper if she falls below the level.
+	if global_position.y > fall_limit:
+		respawn()
+
+
+# Return Pepper to the starting position.
+func respawn() -> void:
+	global_position = spawn_position
+	velocity = Vector2.ZERO
+	coyote_timer = 0.0

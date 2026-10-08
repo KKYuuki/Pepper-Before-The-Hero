@@ -20,7 +20,7 @@ The game is inspired by the responsive platforming and combat of **Hollow Knight
 
 ## Gameplay
 
-### Currently Implemented — Week 2
+### Currently Implemented — Week 4
 
 - Left and right movement using keyboard input
 - Jumping with gravity-based movement
@@ -104,7 +104,11 @@ res://
 
 **Testing checklist:** Verify movement in both directions, jumping, landing on the platform, sprite facing direction, and the coyote-time behavior.
 
+Week 2:
 ![Pepper's Movement and Jumping](screenshots/week2.png)
+
+Week 3:
+![Pepper's Platform and Assets](screenshots/week3.png)
 
 ## Asset Credits and AI Disclosure
 
