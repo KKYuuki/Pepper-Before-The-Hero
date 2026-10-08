@@ -104,7 +104,7 @@ res://
 
 **Testing checklist:** Verify movement in both directions, jumping, landing on the platform, sprite facing direction, and the coyote-time behavior.
 
-![Pepper's Movement and Jumping](screenshots\week2.png)
+![Pepper's Movement and Jumping](screenshots/week2.png)
 
 ## Asset Credits and AI Disclosure
 
