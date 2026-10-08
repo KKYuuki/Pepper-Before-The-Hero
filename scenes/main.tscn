@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://d4hlxr7qmym1"]
+
+[ext_resource type="Texture2D" uid="uid://dbpgkojn482yt" path="res://icon.svg" id="1_ig7tw"]
+
+[node name="Main" type="Node2D" unique_id=805956487]
+
+[node name="Pepper" type="Sprite2D" parent="." unique_id=2021945409]
+position = Vector2(539, 322)
+texture = ExtResource("1_ig7tw")
+
+[node name="Label" type="Label" parent="." unique_id=371193259]
+offset_left = 446.0
+offset_top = 409.0
+offset_right = 634.0
+offset_bottom = 432.0
+text = "Pepper: Before the Hero"
